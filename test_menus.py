@@ -4,7 +4,7 @@ from DB import Theater, Base, MovieName, User
 
 # connect with DB
 
-engine = create_engine('sqlite:///theatreDB.db?check_same_thread=False')
+engine = create_engine('postgresql://catalog:password@localhost/catalog')
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
