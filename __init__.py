@@ -22,7 +22,7 @@ APPLICATION_NAME = "Theater Movies Application"
 
 
 # Connect to Database and create database session
-engine = create_engine('sqlite:///theatreDB.db?check_same_thread=False')
+engine = create_engine('postgresql://catalog:password@localhost/catalog')
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
