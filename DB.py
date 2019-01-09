@@ -57,5 +57,5 @@ class MovieName(Base):
         }
 
 
-engine = create_engine('sqlite:///theatreDB.db?check_same_thread=False')
+engine = create_engine('postgresql://catalog:yourPassword@localhost/catalog')
 Base.metadata.create_all(engine)
